@@ -1,0 +1,498 @@
+@charset "utf-8";
+/*
+@font-face{
+	font-family:"hel";
+	src: url("../font/HelveticaNeue.otf");
+}
+*/
+@font-face{
+	font-family:"sao";
+	src: url("../font/MADE SAONARA PERSONAL USE.otf");
+}
+html{
+	scroll-behavior: smooth;
+}
+/* CSS Document */
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+.scroll-up-btn{
+	position: fixed;
+	height: 45px;
+	width: 42px;
+	background: #d32f27;
+	bottom: 30px;
+	right: 30px;
+	text-align: center;
+	line-height: 45px;
+	color: #E9E9E9;
+	z-index: 9999;
+	font-size: 30px;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+.max-width{
+	max-width: 1300px;
+	margin: auto;
+	padding: 0 40px;
+}
+/*navbar*/
+.navbar{
+	position: fixed;
+	width: 100%;
+	padding: 30px 0;
+	transition: all 0.2s ease;
+	font-family: sao;
+	z-index: 1000;
+}
+nav.sticky{
+	padding: 15px 100px;
+	background:#222127 ;
+}
+.navbar .max-width{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.navbar .logo a{
+	color: #E9E9E9;
+	font-size: 35px;
+	font-weight: 600;
+}
+.navbar .logo a span{
+	color: #d32f27;
+	transition: all 0.2s ease;
+}
+.navbar.sticky .logo a span{
+	color: #E9E9E9;
+}
+.navbar .menu li{
+	list-style: none;
+	display: inline-block;
+}
+.navbar .menu li a {
+	color: #E9E9E9;
+	font-size: 18px;
+	font-weight: 500;
+	margin-left: 25px;
+	transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+	color: #d32f27;
+}
+/*home*/
+.home{
+	display: flex;
+	background: url("../hinh/Untitled-1.jpg") no-repeat center;
+	height: 100vh;
+	color: #E9E9E9;
+	min-height: 500px;
+	font-family: sao;
+	line-height: 80px;
+}
+.home .max-width{
+	margin: auto 0 auto 300px;
+}
+.home .homecontent .text-1{
+	font-size: 27px;
+}
+.home .homecontent .text-2{
+	font-size: 75px;
+/*	font-weight: 600;*/
+	margin-left: -3px;
+}
+.home .homecontent .text-3{
+	font-size: 40px;
+	margin: 5px 0;
+}
+.home .homecontent .text-3 span{
+	color: #d32f27;
+	font-weight: 500;
+}
+.home .homecontent a{
+	display: inline-block;
+	background: #d32f27;
+	color: #E9E9E9;
+	font-size: 25px;
+	padding: 0px 36px;
+	margin-top: 30px;
+	border-radius: 6px;
+	border: 2px solid #d32f27;
+	transition: all 0.3s ease;
+}
+.home .homecontent a:hover{
+	color: #d32f27;
+	background: none;
+}
+/*section*/
+.about, .services, .skills, .teams, .contact, footer{
+	font-family: sao;
+}
+.about .aboutcontent,
+.services .ser-content,
+.skills .skills-content,
+.contact .contact-content{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+section{
+	padding: 100px 0 ;
+}
+section .title{
+	position: relative;
+	text-align: center;
+	font-size: 40px;
+	margin-bottom: 60px;
+	padding-bottom: 30px;
+	
+}
+section .title::before{
+	content: "";
+	position: absolute;
+	bottom: 7px;
+	left: 50%;
+	width: 167px;
+	height: 3px;
+	background: #222127;
+	transform: translateX(-50%)
+}
+section .title::after{
+	position: absolute;
+	bottom: -7px;
+	left: 50%;
+	padding: 5px;
+	font-size: 20px;
+	color: #d32f27;
+	background: #E9E9E9;
+	transform: translateX(-50%)
+}
+/*about*/
+.about{
+	background: #E9E9E9;
+}
+.about .title::after{
+	content: "who i am"
+}
+.about .aboutcontent .column-left{
+	width: 45%;
+}
+.about .aboutcontent .column-left img{
+	height: 400px;
+	width: 400px;
+	object-fit: cover;
+	border-radius: 6px;
+}
+.about .aboutcontent .column-right{
+	width: 55%;
+}
+.about .aboutcontent .column-right .text{
+	font-size: 25px;
+	margin-bottom: 10px;
+	font-weight: 600;
+}
+.about .aboutcontent .column-right .text span{
+	color: #d32f27;
+}
+.about .aboutcontent .column-right p{
+	text-align: justify;
+}
+.about .aboutcontent .column-right a{
+	display: inline-block;
+	background: #d32f27;
+	color: #E9E9E9;
+	font-size: 25px;
+	padding: 10px 36px;
+	margin-top: 30px;
+	border-radius: 6px;
+	border: 2px solid #d32f27;
+	transition: all 0.3s ease;
+}
+.about .aboutcontent .column-right a:hover{
+	color: #d32f27;
+	background: none;
+}
+/*services*/
+.services, .teams{
+	background: #222127;
+	color: #E9E9E9;
+}
+.services .ser-content{
+	display: inline-block;
+}
+.services .title::before,
+.teams .title::before{
+	background: #E9E9E9;
+}
+.services .title::after,
+.teams .title::after{
+	content: "what i provide";
+	background: #222127;
+}
+.services .ser-content .card{
+	width: calc(33% - 20px);
+	background: #222127;
+	text-align: center;
+	border-radius: 6px;
+	padding: 20px 25px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	display: inline-block;
+}
+.services .ser-content .card:hover{
+	background: #d32f27;
+}
+.services .ser-content .card .box{
+	transition: all 0.3s ease;
+}
+.services .ser-content .card:hover .box{
+	transform: scale(1.1);
+}
+.services .ser-content .card i{
+	font-size: 50px;
+	color: #d32f27;
+	transition: color 0.3s ease;
+}
+.services .ser-content .card:hover i{
+	color: #E9E9E9;
+}
+.services .ser-content .card .text{
+	font-size: 25px;
+	font-weight: 500;
+	margin: 10px 0 7px 0;
+}
+/*skills*/
+.skills{
+	background: #E9E9E9;
+}
+.skills .title::after{
+	content: "what i now";
+}
+.skills .skills-content .column{
+	width: calc( 50% - 30px );
+}
+.skills .skills-content .left .text{
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+.skills .skills-content .left p{
+	text-align: justify;
+}
+.skills .skills-content .left a{
+	display: inline-block;
+	background: #d32f27;
+	color: #E9E9E9;
+	font-size: 18px;
+	padding: 8px 16px;
+	margin-top: 30px;
+	border-radius: 6px;
+	border: 2px solid #d32f27;
+	transition: all 0.3s ease;
+}
+.skills .skills-content .left a:hover{
+	color: #d32f27;
+	background: none;
+}
+.skills .skills-content .right .bar{
+	margin-bottom: 15px;
+}
+.skills .skills-content .right .info{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 5px;
+}
+.skills .skills-content .right span{
+	font-weight: 700;
+	font-size: 18px;
+}
+.skills .skills-content .right .line{
+	height: 5px;
+	width: 100%;
+	background: #222127;
+	position: relative;
+}
+.skills .skills-content .right .line::before{
+	content: "";
+	position: absolute;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: #d32f27;
+}
+.skills .skills-content .right .html::before{
+	width: 60%;
+}
+.skills .skills-content .right .css::before{
+	width: 60%;
+}
+.skills .skills-content .right .jv::before{
+	width: 50%;
+}
+.skills .skills-content .right .move::before{
+	width: 80%;
+}
+.skills .skills-content .right .lm::before{
+	width: 80%;
+}
+/*team*/
+.teams .title::after{
+	content: "who with me";
+}
+.teams .carousel .card{
+	transition: all 0.3s ease;
+	display:flex;
+	text-align: center;
+	justify-content: space-between;
+}
+.teams .carousel .card .box{
+	width: calc( 50% - 20px );
+	background: none;
+	border-radius: 6px;
+	padding: 25px 25px;
+	cursor: pointer;
+}
+.teams .carousel .card .box .text{
+	font-size: 32px;
+}
+.teams .carousel .card img{
+	height: 350px;
+	width: 350px;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 5px solid #d32f27;
+}
+.teams .carousel .card .box:hover{
+	background: none;
+}
+.teams .carousel .card .box {
+	transition: all 0.3s ease;
+}
+.teams .carousel .card .box:hover{
+	transform: scale(1.1);
+}
+/*contact*/
+.contact{
+	background: #E9E9E9;
+}
+.contact .title::after{
+	content: "get in touch";
+}
+.contact .contact-content .column{
+	width: calc( 50% - 30px );
+}
+.contact .contact-content .text{
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+.contact .contact-content .left p{
+	text-align: justify;
+}
+.contact .contact-content .left .icon{
+	margin: 10px 0;
+}
+.contact .contact-content .row{
+	display: flex;
+	height: 65px;
+	align-items: center;
+}
+.contact .contact-content .row .info{
+	margin-left: 30px;
+}
+.contact .contact-content .row i{
+	font-size: 25px;
+	color: #d32f27;
+}
+.contact .contact-content .info .head{
+	font-weight: 900;
+}
+.contact .contact-content .info .sub-title{
+	color: #333333;
+}
+.contact .right form .fields{
+	display:flex;
+}
+.contact .right form .field,
+.contact .right form .fields .field{
+	height: 45px;
+	width: 100%;
+	margin-bottom: 15px;
+}
+.contact .right form .textarea{
+	height: 80px;
+	width: 100%;
+}
+.contact .right form .name{
+	margin-right: 10px;
+}
+.contact .right form .email{
+	margin-left: 10px;
+}
+.contact .right form .field input,
+.contact .right form .textarea textarea{
+	height: 100%;
+	width: 100%;
+	border: 1px solid #B5B5B5;
+	border-radius: 6px;
+	outline: none;
+	padding: 0 15px;
+	font-size: 17px;
+	font-family: sao;
+}
+.contact .right form .textarea textarea{
+	padding-top: 10px;
+	resize: none;
+}
+.contact .right form .button{
+	height: 47px;
+	width: 170px;
+}
+.contact .right form .button button{
+	width: 100%;
+	height: 100%;
+	border: 2px solid #d32f27;
+	background: #d32f27;
+	color: #E9E9E9;
+	font-size: 20px;
+	font-weight: 500;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+.contact .right form .button button:hover{
+	color: #d32f27;
+	background: none;
+}
+/*footer*/
+footer{
+	background: #222127;
+	padding: 20px 23px;
+	color: #E9E9E9;
+}
+footer span a{
+	color: #d32f27;
+	text-decoration: none;
+}
+footer span a:hover{
+	text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
